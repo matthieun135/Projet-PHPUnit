@@ -10,6 +10,7 @@ CREATE TABLE recettes (
     id INT(100) AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
     imagerecette VARCHAR(100) NOT NULL,
+    contenue varchar(250) NOT NULL,
     difficulté INT NOT NULL,
     idCategories INT(100) NOT NULL,
     CONSTRAINT recettes_cle_idCategories FOREIGN KEY (idCategories) REFERENCES categories (id)
@@ -25,3 +26,5 @@ CREATE TABLE Ingredients (
 INSERT INTO categories (nom) VALUES ("entré");
 INSERT INTO categories (nom) VALUES ("plat");
 INSERT INTO categories (nom) VALUES ("dessert");
+
+INSERT INTO recettes (nom,imagerecette,contenue,difficulté,idCategories) VALUES ("Mug cake chocolats","./images/Mug Cake Chocolats.jpeg","Contenue du mug cake",1,3);
