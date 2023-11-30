@@ -27,4 +27,5 @@ INSERT INTO categories (nom) VALUES ("entré");
 INSERT INTO categories (nom) VALUES ("plat");
 INSERT INTO categories (nom) VALUES ("dessert");
 
-INSERT INTO recettes (nom,imagerecette,contenue,difficulté,idCategories) VALUES ("Mug cake chocolats","./images/Mug Cake Chocolats.jpeg","Contenue du mug cake",1,3);
+INSERT INTO recettes (nom,imagerecette,contenue,difficulté,idCategories) VALUES ("Mug cake chocolats","./images/Mug Cake Chocolats","Recette du mug cake",1,3);
+INSERT INTO recettes (nom,imagerecette,contenue,difficulté,idCategories) VALUES ("Pizza Reine" "./images/Pizza Reine","Recette de la Pizza Reine",3,2);
