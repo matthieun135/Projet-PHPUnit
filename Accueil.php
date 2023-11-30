@@ -1,9 +1,15 @@
-<?php
-echo ("<link rel='stylesheet' href='Acceuil.css'>");
-echo ("<h1 className = 'h1'>Bienvnue sur notre site</h1></br>");
-$lien1= "window.location.href='Recette.php'";
-echo("<button className = 'button' onclick=".$lien1.">Liste des recettes</button>");
-$lien2= "window.location.href='AjoutRecettes.php'";
-echo("<button className = 'button' onclick=".$lien2.">Ajout de recette</button></br>");
-
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='Acceuil.css'>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = 'h1'>Bienvnue sur notre receuille de recette </h1></br>
+    <button type='button' class = 'button' onclick= "window.location.href='Recette.php'" >Liste des recettes</button>
+    <button type='button' class = 'button' onclick= "window.location.href='AjoutRecettes.php'" >Ajout de recette</button></br>
+    
+</body>
+</html>
