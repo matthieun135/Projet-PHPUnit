@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(110, 44, 126);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #252525;
+    margin: 20px 0 0;
+    padding: 20px;
+}
+
+.button-container {
+    gap: 10px;
+}
+
+button {
+    background-color: rgb(15, 2, 188);
+    color: #252525;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #252525;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-block;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: rgb(51, 39, 219);
+}
