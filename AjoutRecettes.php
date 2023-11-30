@@ -5,17 +5,18 @@ require_once 'config.php';
 // Récupérer les données du formulaire
 $id = $_POST['id'];
 $nom = $_POST['nom'];
+$image= $_POST['imagerecette'];
 $difficulte = $_POST['difficulte'];
 $idcategorie = $_POST['idcategorie'];
 
 // Préparer la requête SQL pour insérer une recette
-$sql = "INSERT INTO recettes (id, nom, difficulte, idcategorie) VALUES (?, ?, ?, ?)";
+$sql = "INSERT INTO recettes (id, nom, imagerecette, difficulte, idcategorie) VALUES (?,? ,?, ?, ?)";
 
 // Préparer la déclaration SQL
 $stmt = $conn->prepare($sql);
 
 // Lier les paramètres
-$stmt->bind_param("issi", $id, $nom, $difficulte, $idcategorie);
+$stmt->bind_param("issi", $id, $nom, $image ,$difficulte, $idcategorie);
 
 // Exécuter la requête
 if ($stmt->execute()) {
