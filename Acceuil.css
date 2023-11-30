@@ -1,40 +1,40 @@
 body {
+    background-image: url("livrerecette.jpg");
+    background-size: cover;
     font-family: Arial, sans-serif;
     background-color: rgb(110, 44, 126);
     margin: 0;
     padding: 0;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
 }
 
-h1 {
-    color: #252525;
+.h1 {
+    align-items: center;
+    color: #221111;
+    text-shadow: 2px 2px 4px #4d4b4b;
     margin: 20px 0 0;
     padding: 20px;
+}
+
+
+.button {
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(249, 76, 249);
+    color: #252525;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    align-content: center;
 }
 
 .button-container {
     gap: 10px;
 }
 
-button {
-    background-color: rgb(15, 2, 188);
-    color: #252525;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-    margin: 10px;
-    cursor: pointer;
-    border: 2px solid #252525;
-    border-radius: 8px;
-    transition: background-color 0.3s ease-in-out;
-    display: inline-block;
-    margin: 10px;
-}
-
-button:hover {
-    background-color: rgb(51, 39, 219);
+.button:hover {
+    background-color: rgb(249, 76, 249);
 }
