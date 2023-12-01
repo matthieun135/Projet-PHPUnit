@@ -9,15 +9,25 @@
 </head>
 <body>
     <h2 class="h2"><a href="Accueil.php">Accueil</a></h2>
-
+<form action="AjoutRecettes.php" method="POST">
     <input type="text"> nom de la recette</input>
     <p></p>
-    <input type="url"> lien de l'image</input>
+    <input type="file" id="" name="">
     <p></p>
-    <input type="text"> difficulté</input>
+
+    difficulté
+    <select id="choix" name="choix">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
     <p></p>
     
-    <form action="AjoutRecettes.php" method="post">catégorie
+    catégorie
     <select id="choix" name="choix">
             <option value=""></option>
             <option value="entré">Entrée</option>
@@ -31,13 +41,14 @@
     <p></p>
     <!-- <input type="time"> temps de preparation</input> -->
 
+    <button type="submit">Valider</button>
 </body>
 </html>
 
 
 <?php
 
-
+include ('connexion.php')
 
 
 
