@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class = 'h1'>Bienvnue sur notre receuille de recette </h1></br>
+    <h1 class = 'h1'>Bienvenue sur notre receuille de recette </h1></br>
     <button type='button' class = 'button' onclick= "window.location.href='Recette.php'" >Liste des recettes</button>
     <button type='button' class = 'button' onclick= "window.location.href='AjoutRecettes.php'" >Ajout de recette</button></br>
     
