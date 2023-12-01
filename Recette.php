@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recettes</title>
     <link rel="stylesheet" href="Recette.css">
+    <title>Recettes</title>
 </head>
 <body>
     <h2 class="h2"><a href="Accueil.php">Accueil</a></h2>
