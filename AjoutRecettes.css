@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-image: url("./Images/marbre.jpeg");
+    color: #ffffff;
+}
+
+.h2 a {
+    margin-left: 0%;
+    color: white;
+    font-size: smaller;
+}
+
+.titre {
+    font-size: 35px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px #434343;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nom {
+    font-size: 25px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image{
+    margin-left: 38%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 25%;
+    height: 25%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.difficulte {
+    font-size: 25px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.categorie {
+    font-size: 25px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ingredient {
+    font-size: 25px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contenue {
+    font-size: 25px;
+    margin-left: 38%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button[type="submit"] {
+    margin-left: 45%;
+    padding: 8px 12px;
+    font-size: 30px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
