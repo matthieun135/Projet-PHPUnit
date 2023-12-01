@@ -15,3 +15,8 @@ Modifier les donnée de config.php afait de corespondres avec la base de donnée
 Installer tout les fichier ormis celui de la base de donnée dans un dossier puis placer le dossier dans le sous dossier www de wamp.</br>
 Ouvrer un onglet puis tapez localhost/[Nom du dossier]/Accueil.php </br>
 Bienvenue sur notre Site!
+
+Installation des dépendances pour les test.
+=
+Installer docker si vous ne l'avez pas sur https://getcomposer.org/download . </br>
+Puis faite un clique droit dans votre dossier puis faite: ouvrir dans le terminal. Puis tapez la commande: composer require --dev phpunit/phpunit </br> 
