@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  type="text/css" rel="stylesheet" href="Recette.css">
     <title>Document</title>
 </head>
 <body>
-    <h2><a href="Accueil.php">Accueil</a></h2>
+    <h2 class = "h2"><a href="Accueil.php">Accueil</a></h2>
 </body>
 </html>
 <?php
