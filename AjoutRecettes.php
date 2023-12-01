@@ -66,8 +66,8 @@ include ('connexion.php');
 
 
 if (isset($_POST['Valider'])){
-    $sql = "INSERT INTO recettes (nom, imagerecette, contenue,difficulte, idcategorie) VALUES (?, ? ,?, ?, ?)";
+    $sql = "INSERT INTO recettes (nom, imagerecette, contenue,difficulté, idCategories) VALUES (?, ? ,?, ?, ?)";
     $requete = $connexion->prepare($sql);
-    $requete->execute([]);
+    $requete->execute([$_POST["nom"],"./images/".$_POST["nom"], $_POST["Contenue"], $_POST["difficulte"],$_POST["categorie"]]);
 }
 ?>
