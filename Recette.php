@@ -3,29 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  type="text/css" rel="stylesheet" href="Recette.css">
     <title>Document</title>
 </head>
 <body>
-    <h2 class = "h2"><a href="Accueil.php">Accueil</a></h2>
+    <h2><a href="Accueil.php">Accueil</a></h2>
 </body>
 </html>
 <?php
-include("connexion.php");
-$requete= $connexion->query("SELECT * FROM recettes");
-$recetes= $requete->fetchAll(PDO::FETCH_ASSOC);
-for ($i=0; $i < count($recetes); $i++) { 
-    $image=$recetes[$i]["imagerecette"];
-    $nom=$recetes[$i]["nom"];
-    $nombreetoilesJaune= str_repeat("★ ",$recetes[$i]["difficulté"]);
-    $nombreetoilesGrise=str_repeat("☆ ",5-$recetes[$i]["difficulté"]);
-    $EtoilesDifficulte= $nombreetoilesJaune. $nombreetoilesGrise;
-    echo("<div class='Recette'>");
-    echo("<h2>Recette n°".($i+1)." ".$nom."</h2>");
-    echo("<br/><img src='".$image."' alt ='Image de ".$nom."'></br>");
-    echo("<h3>Difficulté : ". $EtoilesDifficulte ."</h3>");
-    echo("<a href='AfficherRecette.php?ID=".$recetes[$i]["id"]."'>Contenue de la recette.</a>");
-    echo("</div>");
+if (isset($_POST['choix'])){
+    $choix=$_POST["choix"];
+    if ($choix=="Tout"){
+        echo("<h3>Voici toute les recettes.</h3>");
+        include("connexion.php");
+        $requete= $connexion->query("SELECT * FROM recettes");
+        $recetes= $requete->fetchAll(PDO::FETCH_ASSOC);
+        for ($i=0; $i < count($recetes); $i++) { 
+            $image=$recetes[$i]["imagerecette"];
+            $nom=$recetes[$i]["nom"];
+            $nombreetoilesJaune= str_repeat("★ ",$recetes[$i]["difficulté"]);
+            $nombreetoilesGrise=str_repeat("☆ ",5-$recetes[$i]["difficulté"]);
+            $EtoilesDifficulte= $nombreetoilesJaune. $nombreetoilesGrise;
+            echo("<div class='Recette'>");
+            echo("<h2>Recette n°".($i+1)." ".$nom."</h2>");
+            echo("<br/><img src='".$image."' alt ='Image de ".$nom."'></br>");
+            echo("<h3>Difficulté : ". $EtoilesDifficulte ."</h3>");
+            echo("<a href='AfficherRecette.php?ID=".$recetes[$i]["id"]."'>Contenue de la recette.</a>");
+            echo("</div>");
+        }
+    }
+    else{
+        include("connexion.php");
+        echo("<h3>Voici tout les ".$choix.".</h3>");
+        $requete= $connexion->prepare("SELECT id FROM categories WHERE nom=?");
+        $requete->execute([$choix]);
+        $id= $requete->fetch(PDO::FETCH_ASSOC);
+        $requete= $connexion->prepare("SELECT * FROM recettes WHERE idCategories=?");
+        $requete->execute([$id["id"]]);
+        $recetes= $requete->fetchAll(PDO::FETCH_ASSOC);
+        for ($i=0; $i < count($recetes); $i++) { 
+            $image=$recetes[$i]["imagerecette"];
+            $nom=$recetes[$i]["nom"];
+            $nombreetoilesJaune= str_repeat("★ ",$recetes[$i]["difficulté"]);
+            $nombreetoilesGrise=str_repeat("☆ ",5-$recetes[$i]["difficulté"]);
+            $EtoilesDifficulte= $nombreetoilesJaune. $nombreetoilesGrise;
+            echo("<div class='Recette'>");
+            echo("<h2>Recette n°".($i+1)." ".$nom."</h2>");
+            echo("<br/><img src='".$image."' alt ='Image de ".$nom."'></br>");
+            echo("<h3>Difficulté : ". $EtoilesDifficulte ."</h3>");
+            echo("<a href='AfficherRecette.php?ID=".$recetes[$i]["id"]."'>Contenue de la recette.</a>");
+            echo("</div>");
+        }
+    }
 }
-
+else{
+    include("connexion.php");
+    echo("<h3>Voici toute les recettes.</h3>");
+    $requete= $connexion->query("SELECT * FROM recettes");
+    $recetes= $requete->fetchAll(PDO::FETCH_ASSOC);
+    for ($i=0; $i < count($recetes); $i++) { 
+        $image=$recetes[$i]["imagerecette"];
+        $nom=$recetes[$i]["nom"];
+        $nombreetoilesJaune= str_repeat("★ ",$recetes[$i]["difficulté"]);
+        $nombreetoilesGrise=str_repeat("☆ ",5-$recetes[$i]["difficulté"]);
+        $EtoilesDifficulte= $nombreetoilesJaune. $nombreetoilesGrise;
+        echo("<div class='Recette'>");
+        echo("<h2>Recette n°".($i+1)." ".$nom."</h2>");
+        echo("<br/><img src='".$image."' alt ='Image de ".$nom."'></br>");
+        echo("<h3>Difficulté : ". $EtoilesDifficulte ."</h3>");
+        echo("<a href='AfficherRecette.php?ID=".$recetes[$i]["id"]."'>Contenue de la recette.</a>");
+        echo("</div>");
+    }
+}
 ?>
