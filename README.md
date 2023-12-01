@@ -3,7 +3,7 @@ matthieu1335: Matthieu Néel <br/>
 satosatisato: Radu Bardi <br/>
 Nakavasi: Maxance Mangeret <br/>
 
-Pour la base de donnée <br/>
+Pour la base de donnée
 =
 Rentrer dans une console de commande mariaDB et copier tout les commande du fichier DATABASE.sql et coller les dans la console de commande.<br/>
 Cré un utilisateur et lui donner tout les droit sur la base de donnée récament cré.</br>
@@ -18,5 +18,5 @@ Bienvenue sur notre Site!
 
 Installation des dépendances pour les test.
 =
-Installer docker si vous ne l'avez pas sur https://getcomposer.org/download . </br>
+Installer composer si vous ne l'avez pas sur https://getcomposer.org/download . </br>
 Puis faite un clique droit dans votre dossier puis faite: ouvrir dans le terminal. Puis tapez la commande: composer require --dev phpunit/phpunit </br> 
